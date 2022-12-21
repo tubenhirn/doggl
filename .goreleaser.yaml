@@ -1,0 +1,28 @@
+builds:
+  - main: ./main.go
+    id: "doggl"
+    binary: "{{ .Target }}/doggl"
+    no_unique_dist_dir: true
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: linux
+        goarch: arm64
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - "-X main.appVersion={{.Env.APP_VERSION}}"
+
+archives:
+  - replacements:
+      darwin: Darwin
+      linux: Linux
+      amd64: x86_64
+    wrap_in_directory: false
+
+gitlab_urls:
+  use_package_registry: true
