@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"strconv"
 	"time"
 
@@ -9,8 +10,13 @@ import (
 	doggl "github.com/tubenhirn/doggl/lib"
 )
 
+var date string
+
 func init() {
 	rootCmd.AddCommand(bookCmd)
+
+	bookCmd.Flags().StringVarP(&date, "date", "d", "", "A custom date for your booking (format 2022-01-15).")
+
 	viper.SetDefault("duration", 28800)
 	viper.SetDefault("description", "Homeoffice")
 	viper.SetDefault("created_with", "doggl")
@@ -40,7 +46,16 @@ var bookCmd = &cobra.Command{
 			customDuration, _ := strconv.ParseInt(args[0], 10, 64)
 			duration = customDuration
 		}
+
 		startTime := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
+		// check for customStartDate flag
+		if date != "" {
+			customStartDate, err := time.Parse("2006-01-02", date)
+			if err != nil {
+				fmt.Println(err)
+			}
+			startTime = time.Date(customStartDate.Year(), customStartDate.Month(), customStartDate.Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
+		}
 		timeEntry := doggl.TimeEntry{
 			Duration:    duration,
 			Start:       startTime.Format(time.RFC3339),
