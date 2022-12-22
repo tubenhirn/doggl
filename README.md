@@ -2,13 +2,21 @@
 
 A simple toggl cli.
 
+## installation
 
-## Configuration
+### homebrew
+
+``` shell
+brew tap tubenhirn/homebrew-formulae
+brew install doggl
+```
+
+## configuration
 
 Copy the `.doggl` file from the example folder to your homedirectory.\
 Fill the missing values `TOGGL_TOKEN`, `PROJECT_ID` and `WORKSPACE_ID`.
 
-## Usage
+## usage
 
 Simple:
 
@@ -22,7 +30,7 @@ Custom duration:
 doggl book 1800
 ```
 
-## Build
+## build
 
 With `goreleaser`:
 
