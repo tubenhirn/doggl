@@ -11,9 +11,8 @@ import (
 var (
 	cfgFile     string
 	userLicense string
-	appVersion  string
-
-	rootCmd = &cobra.Command{
+	AppVersion  string
+	rootCmd     = &cobra.Command{
 		Use:   "doggl",
 		Short: "Doogl - A simple toggl cli.",
 	}

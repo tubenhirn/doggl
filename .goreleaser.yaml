@@ -15,7 +15,7 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - "-X main.appVersion={{.Env.APP_VERSION}}"
+      - "-X github.com/tubenhirn/doggl/cmd.AppVersion={{.Env.APP_VERSION}}"
 
 archives:
   - replacements:
