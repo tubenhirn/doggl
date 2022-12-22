@@ -44,6 +44,9 @@ func initConfig() {
 		viper.SetConfigName(".doggl")
 	}
 
+	// look for DOG_ prefixed env vars
+	viper.SetEnvPrefix("DOG")
+
 	viper.AutomaticEnv()
 
 	if err := viper.ReadInConfig(); err != nil {

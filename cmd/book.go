@@ -65,7 +65,8 @@ var bookCmd = &cobra.Command{
 			CreatedWith: viper.GetString("created_with"),
 		}
 
-		apiToken := viper.GetString("token")
+		// load the api token from the env|configfile
+		apiToken := viper.GetString("api_token")
 
 		dogglClient := doggl.NewDefaultClient(apiToken)
 		dogglClient.StartTimeEntry(timeEntry)
