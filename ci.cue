@@ -2,7 +2,6 @@ package ci
 
 import (
 	"dagger.io/dagger"
-	"dagger.io/dagger/core"
 
 	"universe.dagger.io/alpha/go/golangci"
 	"github.com/tubenhirn/dagger-ci-modules/goreleaser"
@@ -18,17 +17,10 @@ dagger.#Plan & {
 
 	actions: {
 		_source:  client.filesystem["."].read.contents
-		_version: core.#ReadFile & {
-			input: _source
-			path:  "version"
-		}
 		build: goreleaser.#Release & {
 			source:     _source
 			snapshot:   true
 			removeDist: true
-			env: {
-				"APP_VERSION": _version.contents
-			}
 		}
 
 		lint: {
@@ -42,7 +34,6 @@ dagger.#Plan & {
 			source:     _source
 			removeDist: true
 			env: {
-				"APP_VERSION":  _version.contents
 				"GITHUB_TOKEN": client.env.GITHUB_TOKEN
 			}
 		}
