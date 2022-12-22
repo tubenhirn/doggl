@@ -1,6 +1,7 @@
 # doggl
 
-A simple toggl cli.
+A simple toggl cli.\
+In upper bavaria we "sometimes" pronounce the `t` like a `d`.
 
 ## installation
 
