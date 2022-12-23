@@ -11,6 +11,7 @@ import (
 	doggl "github.com/tubenhirn/doggl/lib"
 )
 
+const apiToken doggl.ContextKey = "api_token"
 var date string
 
 func init() {
@@ -43,7 +44,6 @@ var bookCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		// load the api token from the env|configfile
 		// and pass it to a context
-		var apiToken doggl.ContextKey = "api_token"
 		apiTokenVal := viper.GetString("api_token")
 		ctx := context.WithValue(context.Background(), apiToken, apiTokenVal)
 

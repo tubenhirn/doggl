@@ -15,9 +15,9 @@ import (
 const (
 	baseURI    = "https://api.track.toggl.com/api/v9"
 	retryCount = 3
+	apiToken ContextKey = "api_token"
 )
 
-var apiToken ContextKey = "api_token"
 
 type Client struct {
 	ctx    context.Context
