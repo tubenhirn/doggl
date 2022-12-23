@@ -40,7 +40,7 @@ brews:
     # The project name and current git tag are used in the format string.
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
 
-    description: "Software to create fast and easy drum rolls."
+    description: "Simple toggl client for work time tracking."
 
     # Setting this will prevent goreleaser to actually try to commit the updated
     # formula - instead, the formula file will be stored on the dist folder only,
