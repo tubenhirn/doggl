@@ -2,6 +2,7 @@ package doggl
 
 import (
 	"bytes"
+	"context"
 	"encoding/base64"
 	"encoding/json"
 	"errors"
@@ -16,22 +17,24 @@ const (
 	retryCount = 3
 )
 
+var apiToken ContextKey = "api_token"
+
 type Client struct {
+	ctx    context.Context
 	client *http.Client
-	token  string
 }
 
-func NewClient(client *http.Client, token string) *Client {
+func NewClient(ctx context.Context, client *http.Client) *Client {
 	return &Client{
+		ctx:    ctx,
 		client: client,
-		token:  token,
 	}
 }
 
-func NewDefaultClient(token string) *Client {
+func NewDefaultClient(ctx context.Context) *Client {
 	return &Client{
+		ctx:    ctx,
 		client: http.DefaultClient,
-		token:  token,
 	}
 }
 
@@ -44,7 +47,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 		return
 	}
 
-	basic := base64.StdEncoding.EncodeToString([]byte(client.token + ":api_token"))
+	basic := base64.StdEncoding.EncodeToString([]byte(client.ctx.Value(apiToken).(string) + ":api_token"))
 	req.Header.Add("Authorization", "Basic "+basic)
 	req.Header.Set("Content-Type", "application/json; charset=utf-8")
 

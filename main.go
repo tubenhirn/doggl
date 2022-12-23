@@ -1,9 +1,9 @@
 package main
 
 import (
-  "github.com/tubenhirn/doggl/cmd"
+	"github.com/tubenhirn/doggl/cmd"
 )
 
 func main() {
-  cmd.Execute()
+	cmd.Execute()
 }

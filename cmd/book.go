@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"fmt"
 	"strconv"
 	"time"
@@ -40,6 +41,15 @@ var bookCmd = &cobra.Command{
 		return nil
 	},
 	Run: func(cmd *cobra.Command, args []string) {
+		// load the api token from the env|configfile
+		// and pass it to a context
+		var apiToken doggl.ContextKey = "api_token"
+		apiTokenVal := viper.GetString("api_token")
+		ctx := context.WithValue(context.Background(), apiToken, apiTokenVal)
+
+		// create a new httpClient with the context
+		dogglClient := doggl.NewDefaultClient(ctx)
+
 		duration := viper.GetInt64("duration")
 		// check for duration parameter
 		if len(args) > 0 {
@@ -65,10 +75,6 @@ var bookCmd = &cobra.Command{
 			CreatedWith: viper.GetString("created_with"),
 		}
 
-		// load the api token from the env|configfile
-		apiToken := viper.GetString("api_token")
-
-		dogglClient := doggl.NewDefaultClient(apiToken)
 		dogglClient.StartTimeEntry(timeEntry)
 	},
 }
