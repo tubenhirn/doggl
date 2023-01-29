@@ -52,7 +52,7 @@ dagger.#Plan & {
 			sourcecode: _source
 			platform:   "git"
 			authToken:  client.env.GITHUB_TOKEN
-			version:    "v2.9.0"
+			version:    "v2.10.0"
 		}
 	}
 }
