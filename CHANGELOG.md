@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/tubenhirn/doggl/compare/v1.3.1...v1.3.2) (2023-01-29)
+
+
+### Miscellaneous Chores
+
+* update semantic-release version to v2.10.1 ([632805e](https://github.com/tubenhirn/doggl/commit/632805e2b70c28655cf2cfc7dc1b3eb101838fe0))
+
 ## [1.3.1](https://github.com/tubenhirn/doggl/compare/v1.3.0...v1.3.1) (2023-01-29)
 
 
