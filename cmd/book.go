@@ -84,6 +84,12 @@ var bookCmd = &cobra.Command{
 		}
 
 		// add the timentry
-		dogglClient.StartTimeEntry(timeEntry)
+		_, resErr := dogglClient.StartTimeEntry(timeEntry)
+		if resErr != nil {
+			panic(resErr)
+		} else {
+			fmt.Println("new time entry created.")
+		}
+
 	},
 }

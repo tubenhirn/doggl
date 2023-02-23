@@ -44,7 +44,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 
 	req, err := http.NewRequest(method, uri.String(), nil)
 	if err != nil {
-		return
+		return nil, err
 	}
 
 	basic := base64.StdEncoding.EncodeToString([]byte(client.ctx.Value(apiToken).(string) + ":api_token"))
@@ -54,7 +54,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 	if param != nil {
 		body, marshalErr := json.Marshal(param)
 		if marshalErr != nil {
-			return
+			return nil, marshalErr
 		}
 
 		req.Body = ioutil.NopCloser(bytes.NewReader(body))
@@ -64,7 +64,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 	for count < retryCount {
 		res, err := client.client.Do(req)
 		if err == nil {
-			return res, err
+			return res, nil
 		}
 		count++
 	}

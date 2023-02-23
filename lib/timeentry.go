@@ -2,6 +2,7 @@ package doggl
 
 import (
 	"encoding/json"
+	"errors"
 	"strconv"
 )
 
@@ -25,10 +26,13 @@ func (client *Client) StartTimeEntry(timeEntry TimeEntry) (response TimeEntryRes
 		return TimeEntryResponse{}, err
 	}
 
-	enc := json.NewDecoder(res.Body)
-	if err := enc.Decode(&response); err != nil {
-		return TimeEntryResponse{}, err
+	if res.StatusCode == 200 {
+		enc := json.NewDecoder(res.Body)
+		if err := enc.Decode(&response); err != nil {
+			return TimeEntryResponse{}, err
+		}
+		return response, nil
+	} else {
+		return TimeEntryResponse{}, errors.New("request failed - " + res.Status)
 	}
-
-	return response, nil
 }
