@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/tubenhirn/doggl/compare/v1.3.2...v1.4.0) (2023-02-23)
+
+
+### Features
+
+* add better error handling for failed requests ([8683022](https://github.com/tubenhirn/doggl/commit/86830220e8e695c0dc2d979ef4f42fcd229a0515))
+
+
+### Miscellaneous Chores
+
+* **deps:** update module go to 1.20 ([a995a34](https://github.com/tubenhirn/doggl/commit/a995a347509c18526f56da7447fc7a111fd4f693))
+
 ## [1.3.2](https://github.com/tubenhirn/doggl/compare/v1.3.1...v1.3.2) (2023-01-29)
 
 
