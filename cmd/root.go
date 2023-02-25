@@ -10,6 +10,7 @@ import (
 
 var (
 	cfgFile     string
+	apitoken    string
 	userLicense string
 	AppVersion  string
 	rootCmd     = &cobra.Command{
@@ -23,10 +24,12 @@ func Execute() error {
 }
 
 func init() {
-	cobra.OnInitialize(initConfig)
-
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.doggl)")
 
+	rootCmd.PersistentFlags().StringVarP(&apitoken, "api_token", "t", "", "A toggl api token.")
+	viper.BindPFlag("api_token", rootCmd.PersistentFlags().Lookup("api_token"))
+
+	cobra.OnInitialize(initConfig)
 }
 
 func initConfig() {

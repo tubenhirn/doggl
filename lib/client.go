@@ -15,7 +15,7 @@ import (
 const (
 	baseURI    = "https://api.track.toggl.com/api/v9"
 	retryCount = 3
-	apiToken ContextKey = "api_token"
+	apiTokenKey ContextKey = "api_token"
 )
 
 
@@ -38,6 +38,7 @@ func NewDefaultClient(ctx context.Context) *Client {
 	}
 }
 
+
 func (client *Client) do(method string, endpoint string, param interface{}) (res *http.Response, err error) {
 	uri, _ := url.Parse(baseURI)
 	uri.Path = path.Join(uri.Path, endpoint)
@@ -47,7 +48,8 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 		return nil, err
 	}
 
-	basic := base64.StdEncoding.EncodeToString([]byte(client.ctx.Value(apiToken).(string) + ":api_token"))
+	apiTokenValue := client.ctx.Value(apiTokenKey).(string)
+	basic := base64.StdEncoding.EncodeToString([]byte(apiTokenValue + ":api_token"))
 	req.Header.Add("Authorization", "Basic "+basic)
 	req.Header.Set("Content-Type", "application/json; charset=utf-8")
 
