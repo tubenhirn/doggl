@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/tubenhirn/doggl/compare/v1.4.0...v1.5.0) (2023-02-25)
+
+
+### Continuous Integration
+
+* update dagger-ci-modules version ([da2cf1a](https://github.com/tubenhirn/doggl/commit/da2cf1a650f946241003766ea3ca193a702aefb2))
+
+
+### Features
+
+* add api token cli flag ([efc05a6](https://github.com/tubenhirn/doggl/commit/efc05a6a5d898c99caeb951f759cf07bb2b6d5cb))
+
 # [1.4.0](https://github.com/tubenhirn/doggl/compare/v1.3.2...v1.4.0) (2023-02-23)
 
 
