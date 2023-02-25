@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"strconv"
 	"time"
@@ -11,7 +12,9 @@ import (
 	doggl "github.com/tubenhirn/doggl/lib"
 )
 
-const apiToken doggl.ContextKey = "api_token"
+// is key for context storage
+const apiTokenKey doggl.ContextKey = "api_token"
+
 var date string
 
 func init() {
@@ -41,11 +44,13 @@ var bookCmd = &cobra.Command{
 		}
 		return nil
 	},
-	Run: func(cmd *cobra.Command, args []string) {
-		// load the api token from the env|configfile
+	RunE: func(cmd *cobra.Command, args []string) error {
+		// pass the apitoken to a context
 		apiTokenVal := viper.GetString("api_token")
-		// pass the token to a context
-		ctx := context.WithValue(context.Background(), apiToken, apiTokenVal)
+		if apiTokenVal == "" {
+			return errors.New("api_token not set.")
+		}
+		ctx := context.WithValue(context.Background(), apiTokenKey, apiTokenVal)
 
 		// create a new httpClient with the context and its params
 		dogglClient := doggl.NewDefaultClient(ctx)
@@ -55,7 +60,7 @@ var bookCmd = &cobra.Command{
 		if len(args) > 0 {
 			customDuration, err := strconv.ParseInt(args[0], 10, 64)
 			if err != nil {
-				panic(err)
+				return err
 			}
 			// set the customDuration as duration for the timeEntry
 			duration = customDuration
@@ -66,8 +71,7 @@ var bookCmd = &cobra.Command{
 		if date != "" {
 			customStartDate, err := time.Parse("2006-01-02", date)
 			if err != nil {
-				fmt.Println(err)
-				panic(err)
+				return err
 			}
 			// set the customStartDate as startTime for the timeEntry
 			startTime = time.Date(customStartDate.Year(), customStartDate.Month(), customStartDate.Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
@@ -86,10 +90,11 @@ var bookCmd = &cobra.Command{
 		// add the timentry
 		_, resErr := dogglClient.StartTimeEntry(timeEntry)
 		if resErr != nil {
-			panic(resErr)
-		} else {
-			fmt.Println("new time entry created.")
+			return resErr
 		}
 
+		fmt.Println("new time entry created.")
+
+		return nil
 	},
 }
