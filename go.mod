@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.15.0
-	github.com/tubenhirn/dagger-ci-modules/v2 v2.0.0-20230226183535-473d61d96eeb
+	github.com/tubenhirn/dagger-ci-modules/v2 v2.0.0-20230227073715-262a10f7798a
 )
 
 require (
