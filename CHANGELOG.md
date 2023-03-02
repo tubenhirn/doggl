@@ -1,3 +1,27 @@
+# [1.6.0](https://github.com/tubenhirn/doggl/compare/v1.5.0...v1.6.0) (2023-03-02)
+
+
+### Bug Fixes
+
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 262a10f ([d40f337](https://github.com/tubenhirn/doggl/commit/d40f33713ba08356cb127771cd80ff52a4bdc557))
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 5470090 ([7474179](https://github.com/tubenhirn/doggl/commit/747417910a2f76850bfed86c9ac7bf0bf8625574))
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to c660d48 ([b6f3a36](https://github.com/tubenhirn/doggl/commit/b6f3a367695dbd48e37d73d70cb2c62ff5c65387))
+
+
+### Code Refactoring
+
+* remove dagger dps from doggl ([08fb06a](https://github.com/tubenhirn/doggl/commit/08fb06a06cfdf7b6905d09b11cebb9534fb0651a))
+
+
+### Continuous Integration
+
+* rebuild dagger-cue ci with go sdk ([5bff365](https://github.com/tubenhirn/doggl/commit/5bff3655e259bf169377c8bc23e3929f1b05df27))
+
+
+### Features
+
+* add some more parameters for book command ([4ec4f17](https://github.com/tubenhirn/doggl/commit/4ec4f17a6eb2ba9000bbd2913fe08ee1dfa71a40))
+
 # [1.5.0](https://github.com/tubenhirn/doggl/compare/v1.4.0...v1.5.0) (2023-02-25)
 
 
