@@ -16,14 +16,16 @@ import (
 const apiTokenKey doggl.ContextKey = "api_token"
 
 var date string
+var description string
+var duration int64
 
 func init() {
 	rootCmd.AddCommand(bookCmd)
 
 	bookCmd.Flags().StringVarP(&date, "date", "d", "", "A custom date for your booking (format 2022-01-15).")
+	bookCmd.Flags().StringVarP(&description, "description", "e", "Homeoffice", "A custom description for the time entry.")
+	bookCmd.Flags().Int64VarP(&duration, "duration", "u", 28800, "The duration of the time entry.")
 
-	viper.SetDefault("duration", 28800)
-	viper.SetDefault("description", "Homeoffice")
 	viper.SetDefault("created_with", "doggl")
 	viper.SetDefault("start_hour", 7)
 	viper.SetDefault("start_minute", 15)
@@ -55,17 +57,6 @@ var bookCmd = &cobra.Command{
 		// create a new httpClient with the context and its params
 		dogglClient := doggl.NewDefaultClient(ctx)
 
-		duration := viper.GetInt64("duration")
-		// check for duration parameter and parse it to int if present
-		if len(args) > 0 {
-			customDuration, err := strconv.ParseInt(args[0], 10, 64)
-			if err != nil {
-				return err
-			}
-			// set the customDuration as duration for the timeEntry
-			duration = customDuration
-		}
-
 		startTime := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
 		// check for customStartDate flag and parse it to the right time format
 		if date != "" {
@@ -83,7 +74,7 @@ var bookCmd = &cobra.Command{
 			Start:       startTime.Format(time.RFC3339),
 			ProjectId:   viper.GetInt("project"),
 			WorkspaceId: viper.GetInt("workspace"),
-			Description: viper.GetString("description"),
+			Description: description,
 			CreatedWith: viper.GetString("created_with"),
 		}
 
