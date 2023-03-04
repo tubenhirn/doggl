@@ -25,6 +25,10 @@ build: ## build doggl
 	@echo "building..."
 	go run ci/ci.go --snapshot=true
 
+tag: ## tag doggl
+	@echo "taggin..."
+	go run ci/ci.go --snapshot=false
+
 release: ## release doggl
 	@echo "release..."
 	go run ci/ci.go --snapshot=false
