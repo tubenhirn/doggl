@@ -70,7 +70,9 @@ func main() {
 
 		options := semanticrelease.SemanticOpts{
 			Source:   dir,
-			Platform: "github",
+			// use "git" for tag only
+			// release is done with goreleaser
+			Platform: "git",
 			Env:      map[string]string{},
 			Secret:   secrets,
 		}
