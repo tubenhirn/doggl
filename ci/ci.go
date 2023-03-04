@@ -9,6 +9,7 @@ import (
 
 	"dagger.io/dagger"
 	"github.com/tubenhirn/dagger-ci-modules/v2/goreleaser"
+	"github.com/tubenhirn/dagger-ci-modules/v2/semanticrelease"
 )
 
 func main() {
@@ -23,11 +24,11 @@ func main() {
 	defer client.Close()
 
 	task := flag.String("task", "", "the task to execute.")
-	if *task == "release" {
-		snapshot := flag.Bool("snapshot", true, "the string of the platform to run renovate on.")
-		clean := flag.Bool("clean", true, "the string of the platform to run renovate on.")
-		flag.Parse()
+	snapshot := flag.Bool("snapshot", true, "the string of the platform to run renovate on.")
+	clean := flag.Bool("clean", true, "the string of the platform to run renovate on.")
 
+	flag.Parse()
+	if *task == "release" {
 		fmt.Println("running with flags:", "\nsnapshot", *snapshot, "\nremovedist", *clean)
 
 		var secrets = make(map[string]dagger.SecretID)
@@ -65,8 +66,17 @@ func main() {
 		}
 		secrets["GITHUB_TOKEN"] = githubTokenId
 
-		// dir, _ := os.Getwd()
+		dir, _ := os.Getwd()
 
-		options :=
+		options := semanticrelease.SemanticOpts{
+			Source:   dir,
+			Platform: "github",
+			Env:      map[string]string{},
+			Secret:   secrets,
+		}
+
+		if err := semanticrelease.Semanticrelease(ctx, *client, options); err != nil {
+			fmt.Println(err)
+		}
 	}
 }

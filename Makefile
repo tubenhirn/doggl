@@ -23,15 +23,15 @@
 
 build: ## build doggl
 	@echo "building..."
-	go run ci/ci.go --snapshot=true
+	go run ci/ci.go -task release -snapshot true
 
 tag: ## tag doggl
 	@echo "taggin..."
-	go run ci/ci.go --snapshot=false
+	go run ci/ci.go -task tag
 
 release: ## release doggl
 	@echo "release..."
-	go run ci/ci.go --snapshot=false
+	go run ci/ci.go -task release -snapshot false
 
 .PHONY: help
 help:  ## 🤔 Show help messages for make targets
