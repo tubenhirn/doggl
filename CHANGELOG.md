@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/tubenhirn/doggl/compare/v1.6.2...v1.6.3) (2023-03-04)
+
+
+### Bug Fixes
+
+* fix ci parameters ([1f2a81c](https://github.com/tubenhirn/doggl/commit/1f2a81c152a73410168448d11447322d4a1afce1))
+
 ## [1.6.2](https://github.com/tubenhirn/doggl/compare/v1.6.1...v1.6.2) (2023-03-04)
 
 
