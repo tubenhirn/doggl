@@ -1,3 +1,21 @@
+## [1.6.1](https://github.com/tubenhirn/doggl/compare/v1.6.0...v1.6.1) (2023-03-04)
+
+
+### Bug Fixes
+
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 2956bae ([22ceaee](https://github.com/tubenhirn/doggl/commit/22ceaee841c8a3a705daa885cc3667d110e8282d))
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 7d6f6b7 ([b6ac15f](https://github.com/tubenhirn/doggl/commit/b6ac15f19d6c363a58dee4a27248740b34d14d21))
+
+
+### Continuous Integration
+
+* add flag for dagger go sdk release ([771ddc0](https://github.com/tubenhirn/doggl/commit/771ddc0ce7d939f59d1c2f84c7dcde7295f21acd))
+* add makefile ([702fc7f](https://github.com/tubenhirn/doggl/commit/702fc7fd24716896bcfcee5345057f35a5dac95c))
+* add more flags to configure goreleaser from command line ([6c19b4b](https://github.com/tubenhirn/doggl/commit/6c19b4bcaaf83f2e5c995088316f36dbf6c52718))
+* rework ci steps ([8b9170d](https://github.com/tubenhirn/doggl/commit/8b9170de168fcf16b6a99bcde836c9e59f0d4eec))
+* rework ci with makefile ([02bce7a](https://github.com/tubenhirn/doggl/commit/02bce7a91bd166f91d25d4a403471ad328e64991))
+* update ci pipeline ([3d18266](https://github.com/tubenhirn/doggl/commit/3d182665278cc167d062faaa52a61c548c09846b))
+
 # [1.6.0](https://github.com/tubenhirn/doggl/compare/v1.5.0...v1.6.0) (2023-03-02)
 
 
