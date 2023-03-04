@@ -24,8 +24,8 @@ func main() {
 	defer client.Close()
 
 	task := flag.String("task", "", "the task to execute.")
-	snapshot := flag.Bool("snapshot", true, "the string of the platform to run renovate on.")
-	clean := flag.Bool("clean", true, "the string of the platform to run renovate on.")
+	snapshot := flag.Bool("snapshot", true, "do a snapshot build.")
+	clean := flag.Bool("clean", true, "clean dist directory.")
 
 	flag.Parse()
 	if *task == "release" {
