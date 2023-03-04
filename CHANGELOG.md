@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/tubenhirn/doggl/compare/v1.6.1...v1.6.2) (2023-03-04)
+
+
+### Bug Fixes
+
+* set platform "git" ([342c706](https://github.com/tubenhirn/doggl/commit/342c706807c6c1aaf27a5161c289150e4cc4e159))
+
 ## [1.6.1](https://github.com/tubenhirn/doggl/compare/v1.6.0...v1.6.1) (2023-03-04)
 
 
