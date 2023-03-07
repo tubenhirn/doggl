@@ -33,10 +33,18 @@ doggl book 1800
 
 ## build
 
-With `goreleaser`:
-
 ``` shell
-export APP_VERSION="v1.0.0"
-goreleaser release --snapshot --rm-dist
+make build
 ```
 
+## tag
+
+``` shell
+make tag
+```
+
+## release
+
+``` shell
+make release
+```
