@@ -8,8 +8,8 @@ import (
 	"os"
 
 	"dagger.io/dagger"
-	"github.com/tubenhirn/dagger-ci-modules/v2/goreleaser"
-	"github.com/tubenhirn/dagger-ci-modules/v2/semanticrelease"
+	"github.com/tubenhirn/dagger-ci-modules/goreleaser"
+	"github.com/tubenhirn/dagger-ci-modules/semanticrelease"
 )
 
 func main() {
