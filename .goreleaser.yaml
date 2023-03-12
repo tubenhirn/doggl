@@ -17,13 +17,6 @@ builds:
     ldflags:
       - "-X github.com/tubenhirn/doggl/cmd.AppVersion={{.Env.APP_VERSION}}"
 
-archives:
-  - replacements:
-      darwin: Darwin
-      linux: Linux
-      amd64: x86_64
-    wrap_in_directory: false
-
 brews:
   - tap:
       owner: tubenhirn
