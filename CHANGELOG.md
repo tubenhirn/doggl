@@ -1,3 +1,24 @@
+## [1.6.5](https://github.com/tubenhirn/doggl/compare/v1.6.4...v1.6.5) (2023-03-12)
+
+
+### Bug Fixes
+
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 38aa15b ([f00bfca](https://github.com/tubenhirn/doggl/commit/f00bfcad99060c662a24c88930cd9d4d55224c22))
+* **deps:** update github.com/tubenhirn/dagger-ci-modules/v2 digest to 7a3edc2 ([54eb68b](https://github.com/tubenhirn/doggl/commit/54eb68b4da0f556ee788d0865d74f4beb992dff8))
+* **deps:** update module dagger.io/dagger to v0.5.0 ([acbd5df](https://github.com/tubenhirn/doggl/commit/acbd5dfcdba9ab52f556ef9328d76a9613e8e12b))
+
+
+### Continuous Integration
+
+* change dagger-ci-module package versioning ([2486f8f](https://github.com/tubenhirn/doggl/commit/2486f8fbea594c6821883e5a4a70364bd706b2db))
+* move to dagger gosdk ([2cb5e62](https://github.com/tubenhirn/doggl/commit/2cb5e621dae0a929fbb46b853f1c3c45c285c3bc))
+* remove deprecated goreleaser option ([c487bfd](https://github.com/tubenhirn/doggl/commit/c487bfd1a7c98ebb50ecaea798d1563d8f249d9c))
+
+
+### Documentation
+
+* update README.md ([5907b6f](https://github.com/tubenhirn/doggl/commit/5907b6f9996a2afa95c8cb5f4c59c86466a6b6e0))
+
 ## [1.6.4](https://github.com/tubenhirn/doggl/compare/v1.6.3...v1.6.4) (2023-03-06)
 
 
