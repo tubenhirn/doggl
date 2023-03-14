@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":semanticCommits", ":disableDependencyDashboard"],
-  "ignorePaths": ["**/cue.mod/**"]
+  "baseBranches": ["main"],
+  "extends": [
+    "config:base",
+    ":semanticCommits",
+    ":disableDependencyDashboard",
+    "github>tubenhirn/renovate-config:postUpdateOptions",
+    "github>tubenhirn/renovate-config:prHourlyLimit"
+  ]
 }
