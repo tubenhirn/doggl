@@ -1,3 +1,25 @@
+## [1.6.6](https://github.com/tubenhirn/doggl/compare/v1.6.5...v1.6.6) (2023-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.5.1 ([5ac0487](https://github.com/tubenhirn/doggl/commit/5ac04873f2174033aa71c339e9d37b6f57a1ae0c))
+* **deps:** update module dagger.io/dagger to v0.5.2 ([c5a96b6](https://github.com/tubenhirn/doggl/commit/c5a96b6f74ccd100aabf9d68819cc3b9cf328739))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.1.0 ([58d16f4](https://github.com/tubenhirn/doggl/commit/58d16f46c44d627ace39b09db1d0285277164068))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.2.0 ([2150a5c](https://github.com/tubenhirn/doggl/commit/2150a5cdbbc9c47e0f9fb2fae8767f8478c9c95f))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.3.0 ([3ab354e](https://github.com/tubenhirn/doggl/commit/3ab354ed5a124568c5b6f9b67567dd1d3821db45))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.1 ([f8325b7](https://github.com/tubenhirn/doggl/commit/f8325b79f62877cd09c34168825136e27919f8a0))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.2 ([7770edd](https://github.com/tubenhirn/doggl/commit/7770edd1a91ed669e54be00e2bb5e46acd0d424b))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.3 ([b0f790b](https://github.com/tubenhirn/doggl/commit/b0f790b0f53afb3f80eb136f148b5d8f2902c7a2))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.4 ([c8b0064](https://github.com/tubenhirn/doggl/commit/c8b006492fbcc07c57fd0a40a6f7d42759909b0a))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.5 ([1b443c3](https://github.com/tubenhirn/doggl/commit/1b443c346d2be9a8011dff51f6615eb9df10b902))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.6 ([42af2f5](https://github.com/tubenhirn/doggl/commit/42af2f554ff4ea75b16b771707172f62c2ef8b0d))
+
+
+### Continuous Integration
+
+* update renovate config ([b3580db](https://github.com/tubenhirn/doggl/commit/b3580db4c51f285725c2fe7e750cd9ecc4348242))
+
 ## [1.6.5](https://github.com/tubenhirn/doggl/compare/v1.6.4...v1.6.5) (2023-03-12)
 
 
