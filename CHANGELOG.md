@@ -1,3 +1,19 @@
+## [1.6.7](https://github.com/tubenhirn/doggl/compare/v1.6.6...v1.6.7) (2023-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.6.0 ([36bb950](https://github.com/tubenhirn/doggl/commit/36bb950dbce2ef6a48e21b78e2646f23b9ed3528))
+* **deps:** update module dagger.io/dagger to v0.6.1 ([4a808dd](https://github.com/tubenhirn/doggl/commit/4a808dd24fca753cee69982b647669cd954819f0))
+* **deps:** update module github.com/spf13/cobra to v1.7.0 ([b4086bf](https://github.com/tubenhirn/doggl/commit/b4086bff1621d790d7a8a94bfec29a6ff558ef68))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.7 ([111cadc](https://github.com/tubenhirn/doggl/commit/111cadc926d1b700f861c446d2b7ef68d078e5ab))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.8 ([e9543be](https://github.com/tubenhirn/doggl/commit/e9543be6366be17aef23dc191ccf4c4fb5193efa))
+
+
+### Miscellaneous Chores
+
+* add go.work.sum ([5a7cb37](https://github.com/tubenhirn/doggl/commit/5a7cb37a1063d18e75c873967fa9a214238ebcb8))
+
 ## [1.6.6](https://github.com/tubenhirn/doggl/compare/v1.6.5...v1.6.6) (2023-04-03)
 
 
