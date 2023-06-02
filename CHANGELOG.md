@@ -1,3 +1,10 @@
+## [1.6.10](https://github.com/tubenhirn/doggl/compare/v1.6.9...v1.6.10) (2023-06-02)
+
+
+### Miscellaneous Chores
+
+* update go deps ([dec9c45](https://github.com/tubenhirn/doggl/commit/dec9c459720f40c309ab87ef97c2f7f5c83f963b))
+
 ## [1.6.9](https://github.com/tubenhirn/doggl/compare/v1.6.8...v1.6.9) (2023-06-02)
 
 
