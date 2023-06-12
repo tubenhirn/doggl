@@ -1,3 +1,13 @@
+## [1.6.11](https://github.com/tubenhirn/doggl/compare/v1.6.10...v1.6.11) (2023-06-12)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.7.1 ([d50238d](https://github.com/tubenhirn/doggl/commit/d50238dc4721878bbe20667ce705658e3e66018f))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.15 ([8e15ad8](https://github.com/tubenhirn/doggl/commit/8e15ad8b32f419b16adaf658a9b60fb5a1706a92))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.16 ([02a5a09](https://github.com/tubenhirn/doggl/commit/02a5a091fbce21ab12215d448ed9fb048fa2fbe2))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v4 to v4.4.17 ([6b9f04c](https://github.com/tubenhirn/doggl/commit/6b9f04c6dcfdcd50a9baa0343a895e877416f1c7))
+
 ## [1.6.10](https://github.com/tubenhirn/doggl/compare/v1.6.9...v1.6.10) (2023-06-02)
 
 
