@@ -32,6 +32,8 @@ github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/tubenhirn/dagger-ci-modules/v5 v5.2.2 h1:42Qpsz3WHywKB3xHsjAqcVJY6kDEpq5ZHeaSM18Gak4=
 github.com/tubenhirn/dagger-ci-modules/v5 v5.2.2/go.mod h1:cHH8DcItU9UCWP6E52KJQ5dMtgM1SmyUip0QQli2+Dk=
+github.com/tubenhirn/dagger-ci-modules/v5 v5.2.3 h1:TtjxVJFHJfAuLIPrXU35wYhXjYcpT9mDGxOXPdW0Fuo=
+github.com/tubenhirn/dagger-ci-modules/v5 v5.2.3/go.mod h1:d4vgo4ZCdFhRuu3+omW3Tx5SNEdx11Osnj3Mslt71B4=
 github.com/vektah/gqlparser/v2 v2.5.6 h1:Ou14T0N1s191eRMZ1gARVqohcbe1e8FrcONScsq8cRU=
 github.com/vektah/gqlparser/v2 v2.5.6/go.mod h1:z8xXUff237NntSuH8mLFijZ+1tjV1swDbpDqjJmk6ME=
 golang.org/x/sync v0.3.0 h1:ftCYgMx6zT/asHUrPw8BLLscYtGznsLAnjq5RH9P66E=
