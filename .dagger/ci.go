@@ -31,7 +31,8 @@ func main() {
 		fmt.Println("running with flags:", "\nsnapshot", *snapshot, "\nremovedist", *clean)
 
 		var secrets = make(map[string]dagger.SecretID)
-		githubTokenId, err := client.Host().EnvVariable("GITHUB_TOKEN").Secret().ID(ctx)
+		token := os.Getenv("GITHUB_TOKEN")
+		githubTokenId, err := client.SetSecret("GITHUB_TOKEN", token).ID(ctx)
 		if err != nil {
 			panic(err)
 		}
@@ -59,7 +60,8 @@ func main() {
 		}
 	} else if *task == "tag" {
 		var secrets = make(map[string]dagger.SecretID)
-		githubTokenId, err := client.Host().EnvVariable("GITHUB_TOKEN").Secret().ID(ctx)
+		token := os.Getenv("GITHUB_TOKEN")
+		githubTokenId, err := client.SetSecret("GITHUB_TOKEN", token).ID(ctx)
 		if err != nil {
 			panic(err)
 		}
