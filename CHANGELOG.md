@@ -1,3 +1,12 @@
+## [1.6.15](https://github.com/tubenhirn/doggl/compare/v1.6.14...v1.6.15) (10/9/2023)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/spf13/viper to v1.17.0 ([f788828](https://github.com/tubenhirn/doggl/commit/f788828495f225c896d70710dbb446b6201ee620))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.8 ([73e141b](https://github.com/tubenhirn/doggl/commit/73e141bd02f86a0f0ace39874aaca4017db43052))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.9 ([3a279a7](https://github.com/tubenhirn/doggl/commit/3a279a7bd07eef6d65fd87366b184b80b1486b14))
+
 ## [1.6.14](https://github.com/tubenhirn/doggl/compare/v1.6.13...v1.6.14) (2023-09-29)
 
 
