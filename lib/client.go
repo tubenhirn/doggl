@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"path"
@@ -59,7 +59,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 			return nil, marshalErr
 		}
 
-		req.Body = ioutil.NopCloser(bytes.NewReader(body))
+		req.Body = io.NopCloser(bytes.NewReader(body))
 	}
 
 	count := 0
