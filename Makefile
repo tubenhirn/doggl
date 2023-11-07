@@ -21,7 +21,11 @@
 # /*******   //*******   //********  //******** /********
 # ///////     ///////     ////////    ////////  ////////
 
-build: ## build doggl
+test: ## test doggl
+	@echo "testing..."
+	go test ./...
+
+build: test ## build doggl
 	@echo "building..."
 	go run .dagger/ci.go --task=release --snapshot=true
 
@@ -29,7 +33,7 @@ tag: ## tag doggl
 	@echo "taggin..."
 	go run .dagger/ci.go --task=tag
 
-release: ## release doggl
+release: test ## release doggl
 	@echo "release..."
 	go run .dagger/ci.go --task=release --snapshot=false
 
