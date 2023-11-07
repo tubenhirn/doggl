@@ -1,3 +1,23 @@
+## [1.6.16](https://github.com/tubenhirn/doggl/compare/v1.6.15...v1.6.16) (11/7/2023)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.9.0 ([310a978](https://github.com/tubenhirn/doggl/commit/310a9780fd61cb8ae7592654db446e46d6ab97f0))
+* **deps:** update module dagger.io/dagger to v0.9.1 ([94e4c18](https://github.com/tubenhirn/doggl/commit/94e4c18119e4030a5e4ce0de5fbd9d981f6609d6))
+* **deps:** update module dagger.io/dagger to v0.9.2 ([58248c4](https://github.com/tubenhirn/doggl/commit/58248c4ab7f3bd8f797046ef08095837d354e797))
+* **deps:** update module dagger.io/dagger to v0.9.3 ([ae7a3bd](https://github.com/tubenhirn/doggl/commit/ae7a3bd4a487a858c1ad51c4557b9d401e8dc982))
+* **deps:** update module github.com/spf13/cobra to v1.8.0 ([7b7793c](https://github.com/tubenhirn/doggl/commit/7b7793c134dbd61f1dd2409bae75b65fced3df35))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.10 ([e785c0e](https://github.com/tubenhirn/doggl/commit/e785c0eaaba3a8a637ca1fab5354e745a1615266))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.11 ([8be0ecc](https://github.com/tubenhirn/doggl/commit/8be0ecc04f0e36209641a87d2d56e2fd2ac03483))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.17 ([4f44451](https://github.com/tubenhirn/doggl/commit/4f444514a5f65b405dae5d3cbbb3d2e12d8fc775))
+* remove deprecate code ([4de87d6](https://github.com/tubenhirn/doggl/commit/4de87d66c385eb993f2eba542b5e8c8196342d72))
+
+
+### Continuous Integration
+
+* add test step ([b870881](https://github.com/tubenhirn/doggl/commit/b870881c1070d65304d84cce995d2eacf4ca5a94))
+
 ## [1.6.15](https://github.com/tubenhirn/doggl/compare/v1.6.14...v1.6.15) (10/9/2023)
 
 
