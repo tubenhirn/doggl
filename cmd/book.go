@@ -17,14 +17,14 @@ const apiTokenKey doggl.ContextKey = "api_token"
 
 var date string
 var description string
-var duration int64
+var duration string
 
 func init() {
 	rootCmd.AddCommand(bookCmd)
 
 	bookCmd.Flags().StringVarP(&date, "date", "d", "", "A custom date for your booking (format 2022-01-15).")
 	bookCmd.Flags().StringVarP(&description, "description", "e", "Homeoffice", "A custom description for the time entry.")
-	bookCmd.Flags().Int64VarP(&duration, "duration", "u", 28800, "The duration of the time entry.")
+	bookCmd.Flags().StringVarP(&duration, "duration", "u", "8h", "The duration of the time entry.")
 
 	viper.SetDefault("created_with", "doggl")
 	viper.SetDefault("start_hour", 7)
@@ -68,9 +68,14 @@ var bookCmd = &cobra.Command{
 			startTime = time.Date(customStartDate.Year(), customStartDate.Month(), customStartDate.Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
 		}
 
+		durationInt, err := timeStringToDuration(duration)
+		if err != nil {
+			return err
+		}
+
 		// prepare the timeEntry struct
 		timeEntry := doggl.TimeEntry{
-			Duration:    duration,
+			Duration:    int64(durationInt),
 			Start:       startTime.Format(time.RFC3339),
 			ProjectId:   viper.GetInt("project"),
 			WorkspaceId: viper.GetInt("workspace"),
@@ -88,4 +93,12 @@ var bookCmd = &cobra.Command{
 
 		return nil
 	},
+}
+
+func timeStringToDuration(timeString string) (time.Duration, error) {
+	duration, err := time.ParseDuration(timeString)
+	if err != nil {
+		return 0, err
+	}
+	return duration, nil
 }
