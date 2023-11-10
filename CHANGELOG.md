@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/tubenhirn/doggl/compare/v1.6.16...v1.7.0) (11/10/2023)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.2.18 ([c212daa](https://github.com/tubenhirn/doggl/commit/c212daabf65c75ed42eea94730cd23a5c7192933))
+
+
+### Features
+
+* change duration from in64 to string ([750f0fe](https://github.com/tubenhirn/doggl/commit/750f0fe182d3627c3b780e5d2bd3206614fc9628))
+
 ## [1.6.16](https://github.com/tubenhirn/doggl/compare/v1.6.15...v1.6.16) (11/7/2023)
 
 
