@@ -1,3 +1,11 @@
+## [1.7.1](https://github.com/tubenhirn/doggl/compare/v1.7.0...v1.7.1) (11/13/2023)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.0 ([feaca4c](https://github.com/tubenhirn/doggl/commit/feaca4c74018c18090fc26124b21b53285e77ebb))
+* fix time parsing ([8423ab7](https://github.com/tubenhirn/doggl/commit/8423ab77742156a9d8591582874bedcaa131fc4b))
+
 # [1.7.0](https://github.com/tubenhirn/doggl/compare/v1.6.16...v1.7.0) (11/10/2023)
 
 
