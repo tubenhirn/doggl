@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/tubenhirn/doggl/compare/v1.7.1...v1.7.2) (11/13/2023)
+
+
+### Bug Fixes
+
+* fix golangci findings ([9d67446](https://github.com/tubenhirn/doggl/commit/9d67446b8f1e7c850afc6b3a12e765af4794ae13))
+
 ## [1.7.1](https://github.com/tubenhirn/doggl/compare/v1.7.0...v1.7.1) (11/13/2023)
 
 
