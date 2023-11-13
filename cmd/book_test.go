@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TesttimeStringToDuration(t *testing.T) {
+func TestTimeStringToDuration(t *testing.T) {
 	duration, _ := timeStringToDuration("8h")
 	assert.Equal(t, int64(28800), duration)
 

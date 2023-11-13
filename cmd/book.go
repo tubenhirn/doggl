@@ -75,7 +75,7 @@ var bookCmd = &cobra.Command{
 
 		// prepare the timeEntry struct
 		timeEntry := doggl.TimeEntry{
-			Duration:    int64(durationInt),
+			Duration:    durationInt,
 			Start:       startTime.Format(time.RFC3339),
 			ProjectId:   viper.GetInt("project"),
 			WorkspaceId: viper.GetInt("workspace"),
@@ -95,10 +95,11 @@ var bookCmd = &cobra.Command{
 	},
 }
 
-func timeStringToDuration(timeString string) (time.Duration, error) {
-	duration, err := time.ParseDuration(timeString)
+func timeStringToDuration(timeString string) (int64, error) {
+	durationNano, err := time.ParseDuration(timeString)
 	if err != nil {
 		return 0, err
 	}
-	return duration, nil
+	durationSec := durationNano.Seconds()
+	return int64(durationSec), nil
 }
