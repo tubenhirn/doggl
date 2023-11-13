@@ -11,7 +11,7 @@ import (
 var (
 	cfgFile     string
 	apitoken    string
-	userLicense string
+	// userLicense string
 	AppVersion  string
 	rootCmd     = &cobra.Command{
 		Use:   "doggl",
@@ -27,7 +27,11 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.doggl)")
 
 	rootCmd.PersistentFlags().StringVarP(&apitoken, "api_token", "t", "", "A toggl api token.")
-	viper.BindPFlag("api_token", rootCmd.PersistentFlags().Lookup("api_token"))
+	err := viper.BindPFlag("api_token", rootCmd.PersistentFlags().Lookup("api_token"))
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 
 	cobra.OnInitialize(initConfig)
 }
