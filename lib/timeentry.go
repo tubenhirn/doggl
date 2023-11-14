@@ -3,7 +3,7 @@ package doggl
 import (
 	"encoding/json"
 	"errors"
-	"strconv"
+	"fmt"
 )
 
 type TimeEntry struct {
@@ -21,7 +21,8 @@ type TimeEntry struct {
 }
 
 func (client *Client) StartTimeEntry(timeEntry TimeEntry) (response TimeEntryResponse, err error) {
-	res, err := client.doRequest("POST", "/workspaces/"+strconv.Itoa(timeEntry.WorkspaceId)+"/time_entries", timeEntry)
+	endpoint := fmt.Sprintf("/workspaces/%d/time_entries", timeEntry.WorkspaceId)
+	res, err := client.doRequest("POST", endpoint, timeEntry)
 	if err != nil {
 		return TimeEntryResponse{}, err
 	}
