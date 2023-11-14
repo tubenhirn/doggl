@@ -18,13 +18,16 @@ const (
 	apiTokenKey ContextKey = "api_token"
 )
 
+type HTTPClient interface {
+	Do(*http.Request) (*http.Response, error)
+}
 
 type Client struct {
 	ctx    context.Context
-	client *http.Client
+	client HTTPClient
 }
 
-func NewClient(ctx context.Context, client *http.Client) *Client {
+func NewClient(ctx context.Context, client HTTPClient) *Client {
 	return &Client{
 		ctx:    ctx,
 		client: client,
@@ -47,6 +50,7 @@ func (client *Client) do(method string, endpoint string, param interface{}) (res
 	if err != nil {
 		return nil, err
 	}
+
 
 	apiTokenValue := client.ctx.Value(apiTokenKey).(string)
 	basic := base64.StdEncoding.EncodeToString([]byte(apiTokenValue + ":api_token"))
