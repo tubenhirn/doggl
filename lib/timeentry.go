@@ -21,7 +21,7 @@ type TimeEntry struct {
 }
 
 func (client *Client) StartTimeEntry(timeEntry TimeEntry) (response TimeEntryResponse, err error) {
-	res, err := client.do("POST", "/workspaces/"+strconv.Itoa(timeEntry.WorkspaceId)+"/time_entries", timeEntry)
+	res, err := client.doRequest("POST", "/workspaces/"+strconv.Itoa(timeEntry.WorkspaceId)+"/time_entries", timeEntry)
 	if err != nil {
 		return TimeEntryResponse{}, err
 	}

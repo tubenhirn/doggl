@@ -42,7 +42,7 @@ func NewDefaultClient(ctx context.Context) *Client {
 }
 
 
-func (client *Client) do(method string, endpoint string, param interface{}) (res *http.Response, err error) {
+func (client *Client) doRequest(method string, endpoint string, param interface{}) (res *http.Response, err error) {
 	uri, _ := url.Parse(baseURI)
 	uri.Path = path.Join(uri.Path, endpoint)
 
