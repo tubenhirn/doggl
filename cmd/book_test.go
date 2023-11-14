@@ -18,4 +18,9 @@ func TestTimeStringToDuration(t *testing.T) {
 
 	duration, _ = timeStringToDuration("")
 	assert.Equal(t, int64(0), duration)
+
+	duration, err := timeStringToDuration("28800")
+	assert.Equal(t, int64(0), duration)
+	assert.NotNil(t, err)
+	assert.Equal(t, "time: missing unit in duration \"28800\"", err.Error())
 }

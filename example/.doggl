@@ -4,8 +4,8 @@ project: <TOGGL_PROJECT_ID>
 workspace: <TOGGL_WORKSPACE_ID>
 # a toggl api token
 api_token: <TOGGL_API_TOKEN>
-# the default duration in seconds (how long do you work)
-duration: 28800 # 8h
+# the default duration (how long do you work)
+duration: 8h
 # when do you start working (h)
 start_hour: 7
 # when do you start working (m)
