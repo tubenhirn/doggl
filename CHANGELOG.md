@@ -1,3 +1,24 @@
+# [1.8.0](https://github.com/tubenhirn/doggl/compare/v1.7.2...v1.8.0) (12/14/2023)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.9.4 ([e342eb7](https://github.com/tubenhirn/doggl/commit/e342eb7cd574c3d22afa44b9676db01f0f9c522a))
+* **deps:** update module github.com/spf13/viper to v1.18.1 ([6b1a43c](https://github.com/tubenhirn/doggl/commit/6b1a43c701e683eeae8121bbb77b3191f35c3eee))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.1 ([b949eab](https://github.com/tubenhirn/doggl/commit/b949eab591c36d34ea1cf72b83325fcdffefbe41))
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.2 ([5353bc2](https://github.com/tubenhirn/doggl/commit/5353bc2d56b719d1a67f58f471b90601e908bcf2))
+
+
+### Features
+
+* add a log entry with detailed time and duration information ([bc69ce0](https://github.com/tubenhirn/doggl/commit/bc69ce0154a449eed306d34a1998055831e0ed30))
+
+
+### Miscellaneous Chores
+
+* bump go version ([e5e91ea](https://github.com/tubenhirn/doggl/commit/e5e91ea041272e74d448de980af1c17e7c7beef9))
+* go mod tidy ([92f598c](https://github.com/tubenhirn/doggl/commit/92f598c0e24a137c2b7a576c0b8d83f974a3e3fb))
+
 ## [1.7.2](https://github.com/tubenhirn/doggl/compare/v1.7.1...v1.7.2) (11/13/2023)
 
 
