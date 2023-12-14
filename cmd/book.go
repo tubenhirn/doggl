@@ -89,7 +89,7 @@ var bookCmd = &cobra.Command{
 			return resErr
 		}
 
-		fmt.Println("new time entry created.")
+		fmt.Printf("new time entry created. starting at %v for %s.", startTime.Format(time.TimeOnly), duration)
 
 		return nil
 	},
