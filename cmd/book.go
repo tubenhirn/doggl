@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/rickar/cal/v2"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	doggl "github.com/tubenhirn/doggl/lib"
@@ -57,6 +58,9 @@ var bookCmd = &cobra.Command{
 		// create a new httpClient with the context and its params
 		dogglClient := doggl.NewDefaultClient(ctx)
 
+		c := cal.NewBusinessCalendar()
+
+
 		startTime := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
 		// check for customStartDate flag and parse it to the right time format
 		if date != "" {
@@ -66,6 +70,11 @@ var bookCmd = &cobra.Command{
 			}
 			// set the customStartDate as startTime for the timeEntry
 			startTime = time.Date(customStartDate.Year(), customStartDate.Month(), customStartDate.Day(), viper.GetInt("start_hour"), viper.GetInt("start_minute"), 00, 0, time.Local)
+		}
+
+		isWorkDay := c.IsWorkday(startTime)
+		if !isWorkDay {
+			return errors.New("not a workday, no time entry created.")
 		}
 
 		durationInt, err := timeStringToDuration(duration)
