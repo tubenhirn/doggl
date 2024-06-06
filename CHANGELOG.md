@@ -1,3 +1,33 @@
+## [1.8.1](https://github.com/tubenhirn/doggl/compare/v1.8.0...v1.8.1) (6/6/2024)
+
+
+### Bug Fixes
+
+* **deps:** update module dagger.io/dagger to v0.10.0 (#89) ([3de1e1a](https://github.com/tubenhirn/doggl/commit/3de1e1a3e85600fb1bd20ac7c35908a870019ee4)), closes [#89](https://github.com/tubenhirn/doggl/issues/89)
+* **deps:** update module dagger.io/dagger to v0.10.1 (#90) ([2fe3a4f](https://github.com/tubenhirn/doggl/commit/2fe3a4f9f5f1c3eadf80111896b587a0fe7cad3f)), closes [#90](https://github.com/tubenhirn/doggl/issues/90)
+* **deps:** update module dagger.io/dagger to v0.10.2 (#92) ([292069f](https://github.com/tubenhirn/doggl/commit/292069fe23a6aaeeeb8539f77c1af488f02213a3)), closes [#92](https://github.com/tubenhirn/doggl/issues/92)
+* **deps:** update module dagger.io/dagger to v0.11.0 (#95) ([c08007a](https://github.com/tubenhirn/doggl/commit/c08007a8dca8db21fc07db7ff17a58c9655d7d30)), closes [#95](https://github.com/tubenhirn/doggl/issues/95)
+* **deps:** update module dagger.io/dagger to v0.11.4 (#96) ([65a6412](https://github.com/tubenhirn/doggl/commit/65a641203c92b6af05eafeb964043b56e81c530e)), closes [#96](https://github.com/tubenhirn/doggl/issues/96)
+* **deps:** update module dagger.io/dagger to v0.11.6 (#98) ([a5e2284](https://github.com/tubenhirn/doggl/commit/a5e22846c7c535fdce8dfee70546d6b94a59333b)), closes [#98](https://github.com/tubenhirn/doggl/issues/98)
+* **deps:** update module dagger.io/dagger to v0.9.10 (#87) ([59abc16](https://github.com/tubenhirn/doggl/commit/59abc16ba9a6817e8ceb4db6e92f37113c2e86c0)), closes [#87](https://github.com/tubenhirn/doggl/issues/87)
+* **deps:** update module dagger.io/dagger to v0.9.6 (#83) ([deda9f5](https://github.com/tubenhirn/doggl/commit/deda9f5b1701bb87e9ebc238fc3a77f13309d666)), closes [#83](https://github.com/tubenhirn/doggl/issues/83)
+* **deps:** update module dagger.io/dagger to v0.9.7 (#86) ([235dec3](https://github.com/tubenhirn/doggl/commit/235dec330d6e302fdc34fc434f332d6153784934)), closes [#86](https://github.com/tubenhirn/doggl/issues/86)
+* **deps:** update module github.com/spf13/viper to v1.18.2 (#84) ([dcaf4cd](https://github.com/tubenhirn/doggl/commit/dcaf4cd6a96528daeda007e165a3cd500a6c47ae)), closes [#84](https://github.com/tubenhirn/doggl/issues/84)
+* **deps:** update module github.com/spf13/viper to v1.19.0 (#100) ([b2e8f0b](https://github.com/tubenhirn/doggl/commit/b2e8f0bc0472db8564dfac245f5ab00ca0885a96)), closes [#100](https://github.com/tubenhirn/doggl/issues/100)
+* **deps:** update module github.com/stretchr/testify to v1.9.0 (#91) ([4730204](https://github.com/tubenhirn/doggl/commit/473020416afb7279d63751923fd5f7ea150c964b)), closes [#91](https://github.com/tubenhirn/doggl/issues/91)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.10 (#99) ([b390c2b](https://github.com/tubenhirn/doggl/commit/b390c2b449acd9814ba874cebfbdbbde2048bdd2)), closes [#99](https://github.com/tubenhirn/doggl/issues/99)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.4 (#85) ([166e676](https://github.com/tubenhirn/doggl/commit/166e67619ce1a9022428bf495110124abd792295)), closes [#85](https://github.com/tubenhirn/doggl/issues/85)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.5 (#88) ([ce223a6](https://github.com/tubenhirn/doggl/commit/ce223a67d3f37284a182de7949c9ec973b9b4f14)), closes [#88](https://github.com/tubenhirn/doggl/issues/88)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.7 (#93) ([db19cd8](https://github.com/tubenhirn/doggl/commit/db19cd872f0bffeb0973d2baeee83a24b5c938eb)), closes [#93](https://github.com/tubenhirn/doggl/issues/93)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.8 (#94) ([7814cff](https://github.com/tubenhirn/doggl/commit/7814cff8f726fde1a65a11911a7d6d33a5df5882)), closes [#94](https://github.com/tubenhirn/doggl/issues/94)
+* **deps:** update module github.com/tubenhirn/dagger-ci-modules/v5 to v5.3.9 (#97) ([96cfab9](https://github.com/tubenhirn/doggl/commit/96cfab911aca4560ef29714960a1cb3a2d177a99)), closes [#97](https://github.com/tubenhirn/doggl/issues/97)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency go to v1.22.4 (#101) ([9e9ea4c](https://github.com/tubenhirn/doggl/commit/9e9ea4c3f181a7e9e089d506ee323a145364e1f5)), closes [#101](https://github.com/tubenhirn/doggl/issues/101)
+* update deps for testing ([7203078](https://github.com/tubenhirn/doggl/commit/72030785020a2ac78a0db15daaa0b4a0ff9a4d2f))
+
 # [1.8.0](https://github.com/tubenhirn/doggl/compare/v1.7.2...v1.8.0) (12/14/2023)
 
 
