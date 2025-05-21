@@ -19,7 +19,7 @@
             pname = "doggl";
             version = v;
             src = ./.;
-            vendorHash = "sha256-+Ezs6+YOOIESXrQneAQAsfvo3L6LwIiBx3LEybgEqBw=";
+            vendorHash = "sha256-HIbPqN27iKGtzsq1ANHmYBSATNKcSY+MsJBXTv6nuhw=";
             ldflags = [ "-X=github.com/tubenhirn/doggl/cmd.AppVersion=${v}" ];
           };
 
