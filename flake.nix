@@ -15,7 +15,7 @@
           v = builtins.replaceStrings [ "\n" "\r" ] [ "" "" ]
             (builtins.readFile ./version);
         in rec {
-          doggl = pkgs.buildGo124Module {
+          doggl = pkgs.buildGo123Module {
             pname = "doggl";
             version = v;
             src = ./.;
@@ -27,7 +27,7 @@
             pname = "doggl-goreleaser";
             version = v;
             src = ./.;
-            buildInputs = [ pkgs.goreleaser pkgs.git pkgs.go_1_24 ];
+            buildInputs = [ pkgs.goreleaser pkgs.git pkgs.go_1_23 ];
             buildPhase = ''
               export HOME=$TMPDIR
               export GORELEASER_CURRENT_TAG="v${v}"
