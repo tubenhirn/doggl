@@ -51,7 +51,7 @@
         in {
           default = pkgs.mkShell {
             buildInputs = [
-              pkgs.go_1_24
+              pkgs.go_1_23
               pkgs.goreleaser
               pkgs.git
               pkgs.direnv
